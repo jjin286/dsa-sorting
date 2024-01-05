@@ -8,6 +8,7 @@ describe('merge', function () {
   it('should be a pure function - in other words, it should not mutate the input arrays', function () {
     let arr1 = [1, 3, 4, 5];
     let arr2 = [2, 4, 6, 8];
+    // 1, 2,  3, 4, 4, 5, 
     merge(arr1, arr2);
     expect(arr1).toEqual([1, 3, 4, 5], "The first input array should be unaffected by the merge")
     expect(arr2).toEqual([2, 4, 6, 8], "The second input array should be unaffected by the merge")
