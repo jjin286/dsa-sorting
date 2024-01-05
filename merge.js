@@ -21,8 +21,16 @@ function merge(arr1, arr2) {
   return sorted;
 }
 
-function mergeSort() {
-  
+function mergeSort(arr) {
+
+  if (arr.length <= 1) return arr;
+
+  let half = Math.ceil(arr.length/2);
+  let left = mergeSort(arr.splice(0,half));
+  let right = mergeSort(arr);
+
+  return merge(left,right);
+
 }
 
 module.exports = { merge, mergeSort};
